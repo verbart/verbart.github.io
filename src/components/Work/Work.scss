@@ -1,0 +1,79 @@
+.work {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  margin: 15px;
+  background: url("./desktop-frame.png") center / 100% auto no-repeat;
+  transition: 0.2s;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    float: left;
+    padding-top: 57%;
+  }
+
+  &__desktop, &__desktop:before, &__desktop:after {
+    position: absolute;
+  }
+
+  &__desktop {
+    display: flex;
+    top: 5%;
+    bottom: 11%;
+    left: 12%;
+    right: 12%;
+    z-index: 10;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+  }
+
+  &__desktop:hover &__link {
+    opacity: .8;
+  }
+
+  &__links {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    transition: .4s;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    opacity: 0;
+    background: #000;
+    transition: .4s;
+
+    &Icon {
+      width: 40%;
+      height: auto;
+
+      path {
+        stroke: #fff;
+        transition: .4s;
+      }
+    }
+
+    &:hover {
+      background: #fff;
+
+      .work__linkIcon {
+        path {
+          stroke: #000;
+        }
+      }
+    }
+  }
+}

@@ -2,10 +2,12 @@
   "name": "verbart.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://verbart.github.io",
   "dependencies": {
     "gh-pages": "^2.0.0",
     "react": "^16.5.2",
     "react-app-rewire-scss": "^1.0.2",
+    "react-app-rewire-svg-react-loader": "codebandits/react-app-rewire-svg-react-loader",
     "react-app-rewired": "^1.6.2",
     "react-dom": "^16.5.2",
     "react-scripts": "1.1.5"
@@ -15,6 +17,6 @@
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --env=jsdom",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   }
 }
